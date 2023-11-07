@@ -1,0 +1,44 @@
+#include <reg51.h>
+void Delay(unsigned int);
+void main(void)
+{
+	while(1)
+	{
+		P1 = 0xFF;
+		Delay(250);
+		P1 = 0x00;
+		Delay(250);
+	}
+}
+
+void Delay(unsigned int xtime)
+{
+	unsigned int i,j;
+	for(i=0;i<xtime;i++)
+	{
+		for(j=0;j<165;j++);
+	}
+}
+
+//Program to interface 8 LEDs with 8051 (Toggling)
+#include <reg51.h>
+void Delay(unsigned int);
+void main(void)
+{
+	while(1)
+	{
+		P1 = 0xAA;
+		Delay(250);
+		P1 = 0x55;
+		Delay(250);
+	}
+}
+
+void Delay(unsigned int xtime)
+{
+	unsigned int i,j;
+	for(i=0;i<xtime;i++)
+	{
+		for(j=0;j<165;j++);
+	}
+}
